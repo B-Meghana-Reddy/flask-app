@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request
+import os
 
 app=Flask(__name__)
 
@@ -34,5 +35,6 @@ def predict():
     else:
         return render_template('result.html',pred="Enter Correct Details Of Weight and Height")
 
-if __name__=='__main__':
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
