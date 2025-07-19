@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #e6f2ff);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #03A9F4;
+            padding: 20px;
+            color: white;
+            font-size: 30px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-box {
+            display: inline-block;
+            text-align: left;
+            margin-top: 30px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: orange;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #ff9900;
+        }
+        h2 {
+            color: orange;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">BMI Calculator</div>
+    <div class="container">
+        <h2>Calculate your BMI Here.</h2>
+        <form action="/predict" method="post" class="form-box">
+            <label for="weight">Weight</label>
+            <input type="text" name="1" placeholder="Weight in kilograms" required>
+
+            <label for="height">Height</label>
+            <input type="text" name="2" placeholder="Height in centimeters" required>
+
+            <br>
+            <button type="submit" class="btn">CALCULATE BMI</button>
+        </form>
+    </div>
+</body>
+</html>

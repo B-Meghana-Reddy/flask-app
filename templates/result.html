@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #e6f2ff);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #03A9F4;
+            padding: 20px;
+            color: white;
+            font-size: 30px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .result {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">BMI Calculator</div>
+    <div class="container">
+        <p class="result">{{ pred }}</p>
+        <img src="{{ url_for('static', filename='bmi_chart.jpg') }}" alt="BMI Chart">
+    </div>
+</body>
+</html>
